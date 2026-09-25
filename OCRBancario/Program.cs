@@ -1,4 +1,6 @@
-﻿string[][] digitos =
+﻿Console.Clear();
+
+string[][] digitos =
 [
     [" _ ", "| |", "|_|"], // 0
     ["   ", "  |", "  |"], // 1
@@ -14,6 +16,12 @@
 
 Console.Write("Digite o número da conta: ");
 string conta = Console.ReadLine()!;
+
+if (conta.Length != 9)
+{
+    Console.WriteLine("Digite exatamente 9 dígitos.");
+    return;
+}
 
 for (int linha = 0; linha < 3; linha++)
 {
